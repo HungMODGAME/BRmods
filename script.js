@@ -10,7 +10,7 @@ const defaultAllProducts = [
         category: 'br',
         name: 'Mobile',
         img: 'https://i.imgur.com/qKG9v2Z.jpeg',
-        desc: '',
+        desc: 'Điều Kiện Để Chơi <br>1. Root Máy<br>2. Dùng KGA<br>3. Dùng PC Root Blustack',
         discountPercentage: 0, 
         variants: [
             { name: '1 Ngày', price: 80000 },
@@ -21,17 +21,6 @@ const defaultAllProducts = [
     },
     {
         id: '2',
-        category: 'br',
-        name: 'Mobile Crack',
-        img: 'https://i.imgur.com/qKG9v2Z.jpeg',
-        desc: '',
-        discountPercentage: 0, 
-        variants: [
-            { name: 'Bảo Trì', price: 999999999999999999999999999999999999999 },
-        ]
-    },
-    {
-        id: '3',
         category: 'br',
         name: 'PC Bypass',
         img: 'https://i.imgur.com/OAomCLz.jpeg',
@@ -44,11 +33,11 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '4',
+        id: '3',
         category: 'br',
         name: 'PC No Bypass',
         img: 'https://i.imgur.com/OAomCLz.jpeg',
-        desc: 'PC',
+        desc: 'Ghép Trận Với  PC',
         discountPercentage: 0,
         variants: [
             { name: '1 Ngày', price: 80000 },
@@ -57,11 +46,11 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '5',
+        id: '4',
         category: 'br',
         name: 'Bypass',
         img: 'https://i.imgur.com/s08M4xi.jpeg',
-        desc: 'Ứng dụng Bypass cho thiết bị di động.',
+        desc: 'Bypass Xếp Hạng 50 Người',
         discountPercentage: 0,
         variants: [
             { name: '1 Tháng', price: 400000 },
@@ -69,7 +58,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '6',
+        id: '5',
         category: 'mxh',
         name: 'Facebook',
         img: 'https://i.imgur.com/uKFMjw3.png',
@@ -80,7 +69,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '7',
+        id: '6',
         category: 'mxh',
         name: 'TikTok',
         img: 'https://i.imgur.com/4ijy5tg.png',
@@ -91,7 +80,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '8',
+        id: '7',
         category: 'lq',
         name: 'IOS - NoJB',
         img: 'https://i.imgur.com/o6wwhWq.jpeg',
@@ -105,7 +94,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '9',
+        id: '8',
         category: 'lq',
         name: 'IOSVIP - NoJB',
         img: 'https://i.imgur.com/TTAPsL4.jpeg',
@@ -116,7 +105,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '10',
+        id: '9',
         category: 'lq',
         name: 'ADRVIP1 - 32/64',
         img: 'https://i.imgur.com/Y2Y5szV.jpeg',
@@ -127,7 +116,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '11',
+        id: '10',
         category: 'lq',
         name: 'ADR - 32/64',
         img: 'https://i.imgur.com/Ds1y6n3.jpeg',
@@ -139,7 +128,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '12',
+        id: '11',
         category: 'lq',
         name: 'ADRVIP - 32/64',
         img: 'https://i.imgur.com/t4yzch1.jpeg',
@@ -152,7 +141,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '13',
+        id: '12',
         category: 'pu',
         name: 'IOSVIP1 - JB',
         img: 'https://i.imgur.com/MO4RAyD.jpeg',
@@ -163,7 +152,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '14',
+        id: '13',
         category: 'pu',
         name: 'IOSVIP2 - JB',
         img: 'https://i.imgur.com/LfNrAgq.jpeg',
@@ -176,7 +165,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '15',
+        id: '14',
         category: 'pu',
         name: 'IOSHS - JB (Bear)',
         img: 'https://i.imgur.com/L4EA28L.jpeg',
@@ -188,7 +177,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '17',
+        id: '15',
         category: 'pu',
         name: 'ADRHS',
         img: 'https://i.imgur.com/tsqAz0D.jpeg',
@@ -203,7 +192,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '18',
+        id: '16',
         category: 'pu',
         name: 'IOSHS - JB (Darcuma)',
         img: 'https://i.imgur.com/9QfTbOP.jpeg',
@@ -216,7 +205,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '19',
+        id: '17',
         category: 'pu',
         name: 'Acc',
         img: 'https://i.imgur.com/mvMfWyu.jpeg',
@@ -228,7 +217,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '20',
+        id: '18',
         category: 'pl',
         name: 'ADR',
         img: 'https://i.imgur.com/MaUEPbE.jpeg',
@@ -247,7 +236,7 @@ const defaultAllProducts = [
         ]
     },
     {
-        id: '21',
+        id: '19',
         category: 'pl',
         name: 'IOS',
         img: 'https://i.imgur.com/XChRLDZ.jpeg',
