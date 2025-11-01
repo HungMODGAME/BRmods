@@ -38,7 +38,9 @@ const defaultAllProducts = [
         desc: 'Xếp Hạng 50 Người',
         discountPercentage: 0,
         variants: [
-            { name: 'Bảo Trì', price: 99999999999999999999999999999999999999 },
+            { name: '7 Ngày', price: 80000 },
+            { name: '10 Ngày', price: 395000 },
+            { name: '30 Ngày', price: 790000 },
         ]
     },
     {
