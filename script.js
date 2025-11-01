@@ -655,7 +655,7 @@ function displayProductsContent(categoryKey, categoryName) {
                     class="buy-now-button" 
                     data-id="${product.id}"
                     onclick="handleZaloBuy(this)">
-                    Mua Ngay (Chat Zalo)
+                    Mua Ngay
                 </button>
             </div>
         `;
@@ -698,7 +698,7 @@ function handleZaloBuy(buttonElement) {
     const zaloMessage = `Tôi muốn mua sản phẩm: ${productInfo.name}.\nPhiên bản đã chọn: ${variantName}.\nGiá: ${finalPrice.toLocaleString('vi-VN')} VNĐ (đã áp dụng giảm giá ${productInfo.discountPercentage}%).\n\nVui lòng tư vấn thêm về cách thức đặt hàng!`;
     const encodedMessage = encodeURIComponent(zaloMessage);
     
-    const zaloLink = `https://zalo.me/${ZALO_PHONE_NUMBER}?text=${encodedMessage}`;
+    const zaloLink = `https://zaloapp.com/qr/p/1i96fxkiiccc4?src=qr${ZALO_PHONE_NUMBER}?text=${encodedMessage}`;
     
     window.open(zaloLink, '_blank');
 }
