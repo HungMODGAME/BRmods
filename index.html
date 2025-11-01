@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Trưng Bày Sản Phẩm - Mua Ngay Zalo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌟 Danh Mục Sản Phẩm</h1>
+        <nav>
+            <button id="view-categories">⬅️ Danh Mục Chính</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="category-section">
+            <h2>Chọn Mục Sản Phẩm</h2>
+            <div id="category-list" class="categories-grid">
+                
+                <div class="category-card" data-category="br">
+                    <img src="https://i.imgur.com/AAXRUxV.jpeg" alt="Áo Sơ Mi">
+                    <h3>BR MODS</h3>
+                    <button class="view-products">Xem Sản Phẩm</button>
+                </div>
+                
+                <div class="category-card" data-category="mxh">
+                    <img src="https://i.imgur.com/qQhHDt3.png" alt="Quần Jeans">
+                    <h3>Dịch Vụ MXH</h3>
+                    <button class="view-products">Xem Sản Phẩm</button>
+                </div>
+
+                <div class="category-card" data-category="lq" id="LQ">
+                    <img src="https://i.imgur.com/0yWxWyA.jpeg" alt="Quần Jeans">
+                    <h3>Liên Quân</h3>
+                    <button class="view-products">Xem Sản Phẩm</button>
+                </div>
+
+                <div class="category-card" data-category="pu" id="LQ">
+                    <img src="https://i.imgur.com/2jhKIO2.jpeg" alt="Quần Jeans">
+                    <h3>PUBG</h3>
+                    <button class="view-products">Xem Sản Phẩm</button>
+                </div>
+
+                <div class="category-card" data-category="pl" id="LQ">
+                    <img src="https://i.imgur.com/JPD40Zg.jpeg" alt="Quần Jeans">
+                    <h3>Play Together</h3>
+                    <button class="view-products">Xem Sản Phẩm</button>
+                </div>
+                
+            </div>
+        </section>
+
+        <section id="product-detail-section" class="products-grid hidden">
+            <h2 id="product-section-title"></h2>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
