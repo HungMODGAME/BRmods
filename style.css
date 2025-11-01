@@ -121,3 +121,16 @@ header {
 .buy-now-button:hover {
     background-color: #0060c0; 
 }
+.header-title-group {
+    /* Sử dụng Flexbox để căn chỉnh logo và h1 trên cùng một hàng */
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.site-logo {
+    /* Đặt kích thước cho logo */
+    height: 90px; /* Chiều cao cố định */
+    width: auto;
+    margin-right: 15px; /* Tạo khoảng cách giữa logo và tiêu đề */
+    border-radius: 4px; /* Thêm bo góc cho logo (tùy chọn) */
+}

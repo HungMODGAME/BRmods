@@ -2,7 +2,7 @@
 const ZALO_PHONE_NUMBER = '0987654321';
 
 // 🔥 DỮ LIỆU SẢN PHẨM MẶC ĐỊNH (DEFAULT SOURCE OF TRUTH)
-// Dữ liệu này chỉ được dùng khi localStorage chưa có.
+// Dữ liệu này luôn được dùng.
 // Lưu ý: ID được chuyển sang dạng chuỗi để tương thích với HTML dataset.
 const defaultAllProducts = [ 
     {
@@ -263,30 +263,20 @@ let allProducts = [];
 
 // --- HÀM QUẢN LÝ DỮ LIỆU CƠ SỞ (LƯU/TẢI TOÀN BỘ CẤU TRÚC) ---
 
-function getOrCreateAllProducts() {
-    // Key đã đổi thành 'fullProductData' để lưu toàn bộ cấu trúc
-    const savedData = localStorage.getItem('fullProductData'); 
-    if (savedData) {
-        try {
-             return JSON.parse(savedData);
-        } catch (e) {
-             console.error("Lỗi parse dữ liệu localStorage, dùng dữ liệu mặc định.", e);
-             return defaultAllProducts;
-        }
-    }
-    // Lần đầu tiên chạy, lưu dữ liệu mặc định vào storage
-    saveAllProductsToStorage(defaultAllProducts);
-    return defaultAllProducts;
-}
+// ❌ BỎ HÀM getOrCreateAllProducts() để ngăn tải từ localStorage
 
+// ❌ SỬA HÀM saveAllProductsToStorage - Không lưu vào localStorage nữa
 function saveAllProductsToStorage(data) {
-    localStorage.setItem('fullProductData', JSON.stringify(data));
-    // Kích hoạt sự kiện storage để cập nhật tự động các tab đang mở
-    window.dispatchEvent(new Event('storage')); 
+    // ⚠️ ĐÃ LOẠI BỎ localStorage.setItem('fullProductData', JSON.stringify(data));
+    console.log('Chức năng lưu vào localStorage đã bị vô hiệu hóa.');
+    // ❌ BỎ window.dispatchEvent(new Event('storage')); để ngăn cập nhật tự động không cần thiết
 }
 
+// ✅ SỬA HÀM loadAllProducts - Luôn tải từ dữ liệu mặc định
 function loadAllProducts() {
-    allProducts = getOrCreateAllProducts();
+    // Luôn tải từ dữ liệu gốc trong file script.js
+    allProducts = defaultAllProducts;
+    console.log('Đã tải dữ liệu sản phẩm mặc định (defaultAllProducts).');
 }
 
 // Tải dữ liệu chính thức khi script được chạy
@@ -540,14 +530,16 @@ function saveAdminChanges() {
         return;
     }
 
-    // Lưu toàn bộ cấu trúc mới vào localStorage
-    saveAllProductsToStorage(newAllProducts);
+    // ❌ LOẠI BỎ VIỆC LƯU VÀO LOCALSTORAGE:
+    // saveAllProductsToStorage(newAllProducts); // Không gọi hàm này nữa
+
+    // ✅ CHỈ CẬP NHẬT BIẾN allProducts TRONG BỘ NHỚ:
+    allProducts = newAllProducts;
     
-    // Tải lại dữ liệu sản phẩm trong bộ nhớ và giao diện admin
-    loadAllProducts(); 
+    // Tải lại giao diện admin để phản ánh các thay đổi vừa thực hiện
     loadAdminPanel(); 
 
-    alert('✅ Đã lưu cấu hình sản phẩm, phiên bản và giá thành công! Trang bán hàng sẽ cập nhật tự động.');
+    alert('✅ Đã lưu cấu hình sản phẩm, phiên bản và giá thành công! LƯU Ý: Thay đổi này **CHỈ HIỆN TRÊN TRÌNH DUYỆT CỦA BẠN** cho đến khi bạn sửa trực tiếp file script.js và tải lên host.');
 }
 
 // --- LOGIC TRANG BÁN HÀNG GỐC (index.html) ---
@@ -825,27 +817,6 @@ document.addEventListener('DOMContentLoaded', () => {
             history.pushState(null, '', 'index.html'); 
         });
 
-        // ------------------------------------------------------------------------------------------------
-        // 🔥 LẮNG NGHE SỰ KIỆN STORAGE (Cập nhật giá tự động không cần load trang)
-        // ------------------------------------------------------------------------------------------------
-        window.addEventListener('storage', (event) => {
-            // Key đã đổi
-            if (event.key === 'fullProductData') { 
-                
-                // 1. Tải lại dữ liệu sản phẩm mới nhất vào bộ nhớ
-                loadAllProducts(); 
-                
-                // 2. Kiểm tra nếu đang ở trang chi tiết sản phẩm, thì re-render lại
-                if (!productDetailSection.classList.contains('hidden')) {
-                    const categoryKey = getCurrentCategoryFromHash();
-                    const categoryName = getCategoryNameByKey(categoryKey);
-
-                    if (categoryKey && categoryName) {
-                         displayProductsContent(categoryKey, categoryName); 
-                         console.log('Cấu trúc sản phẩm đã được cập nhật tự động.');
-                    }
-                }
-            }
-        });
+        // ❌ LOẠI BỎ HÀM LẮNG NGHE SỰ KIỆN STORAGE VÌ KHÔNG CẦN THIẾT NỮA
     }
 });
