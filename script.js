@@ -8,7 +8,7 @@ const defaultAllProducts = [
     {
         id: '1',
         category: 'br',
-        name: 'Mobile',
+        name: '🟢 Mobile',
         img: 'https://i.imgur.com/qKG9v2Z.jpeg',
         desc: 'Điều Kiện Để Chơi <br>1. Root Máy<br>2. Dùng KGA<br>3. Dùng PC Root Blustack',
         discountPercentage: 0, 
@@ -22,12 +22,12 @@ const defaultAllProducts = [
     {
         id: '2',
         category: 'br',
-        name: 'PC Bypass',
+        name: '🟢 PC Bypass',
         img: 'https://i.imgur.com/OAomCLz.jpeg',
         desc: 'Xếp Hạng 50 Người',
         discountPercentage: 0,
         variants: [
-            { name: '7 Ngày', price: 80000 },
+            { name: '7 Ngày', price: 110000 },
             { name: '10 Ngày', price: 395000 },
             { name: '30 Ngày', price: 790000 },
         ]
@@ -35,20 +35,20 @@ const defaultAllProducts = [
     {
         id: '3',
         category: 'br',
-        name: 'PC No Bypass',
+        name: '🟢 PC No Bypass',
         img: 'https://i.imgur.com/OAomCLz.jpeg',
         desc: 'Ghép Trận Với  PC',
         discountPercentage: 0,
         variants: [
             { name: '1 Ngày', price: 80000 },
             { name: '10 Ngày', price: 320000 },
-            { name: '30 Ngày', price: 560000 },
+            { name: '30 Ngày', price: 555000 },
         ]
     },
     {
         id: '4',
         category: 'br',
-        name: 'Bypass',
+        name: '🟢 Bypass',
         img: 'https://i.imgur.com/s08M4xi.jpeg',
         desc: 'Bypass Xếp Hạng 50 Người',
         discountPercentage: 0,
