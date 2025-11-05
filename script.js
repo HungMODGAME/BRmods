@@ -22,7 +22,7 @@ const defaultAllProducts = [
     {
         id: '2',
         category: 'br',
-        name: '🟢 PC Bypass',
+        name: '🛠️ PC Bypass',
         img: 'https://i.imgur.com/OAomCLz.jpeg',
         desc: 'Xếp Hạng 50 Người',
         discountPercentage: 0,
@@ -810,4 +810,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ❌ LOẠI BỎ HÀM LẮNG NGHE SỰ KIỆN STORAGE VÌ KHÔNG CẦN THIẾT NỮA
     }
+
 });
