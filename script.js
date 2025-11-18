@@ -27,7 +27,7 @@ const defaultAllProducts = [
         desc: 'Xếp Hạng 50 Người',
         discountPercentage: 0,
         variants: [
-            { name: '7 Ngày', price: 110000 },
+            { name: '1 Ngày', price: 110000 },
             { name: '10 Ngày', price: 395000 },
             { name: '30 Ngày', price: 790000 },
         ]
@@ -812,4 +812,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
