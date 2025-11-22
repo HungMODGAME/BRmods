@@ -10,7 +10,7 @@ const defaultAllProducts = [
         category: 'br',
         name: '🟢 Mobile',
         img: 'https://i.imgur.com/qKG9v2Z.jpeg',
-        desc: 'Điều Kiện Để Chơi <br>1. Root Máy<br>2. Dùng KGA<br>3. Dùng PC Root Blustack',
+        desc: 'Điều Kiện Để Chơi <br>1. Root Máy<br>2. Dùng PC Root Blustack',
         discountPercentage: 0, 
         variants: [
             { name: '1 Ngày', price: 80000 },
@@ -28,8 +28,8 @@ const defaultAllProducts = [
         discountPercentage: 0,
         variants: [
             { name: '1 Ngày', price: 110000 },
-            { name: '10 Ngày', price: 395000 },
-            { name: '30 Ngày', price: 790000 },
+            { name: '10 Ngày', price: 400000 },
+            { name: '30 Ngày', price: 820000 },
         ]
     },
     {
@@ -42,7 +42,7 @@ const defaultAllProducts = [
         variants: [
             { name: '1 Ngày', price: 80000 },
             { name: '10 Ngày', price: 320000 },
-            { name: '30 Ngày', price: 555000 },
+            { name: '30 Ngày', price: 570000 },
         ]
     },
     {
@@ -812,5 +812,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
 
