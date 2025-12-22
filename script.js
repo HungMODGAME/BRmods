@@ -10,13 +10,13 @@ const defaultAllProducts = [
         category: 'br',
         name: '🟢 Mobile',
         img: 'https://i.imgur.com/qKG9v2Z.jpeg',
-        desc: 'Điều Kiện Để Chơi <br>1. Root Máy<br>2. Dùng PC Root Blustack',
+        desc: 'Điều Kiện Để Chơi <br>1. Root Máy<br>2. Dùng KGA<br>3. Dùng PC Root Blustack',
         discountPercentage: 0, 
         variants: [
             { name: '1 Ngày', price: 80000 },
             { name: '7 Ngày', price: 240000 },
             { name: '15 Ngày', price: 290000 },
-            { name: '30 Ngày', price: 395000 },
+            { name: '30 Ngày', price: 400000 },
         ]
     },
     {
@@ -54,7 +54,6 @@ const defaultAllProducts = [
         discountPercentage: 0,
         variants: [
             { name: '1 Tháng', price: 400000 },
-            { name: 'Vĩnh Viễn', price: 1111000 },
         ]
     },
     {
@@ -246,6 +245,32 @@ const defaultAllProducts = [
             { name: '7 Ngày', price: 150000 },
             { name: '30 Ngày', price: 300000 },
             { name: '10 Tháng', price: 610000 },,
+        ]
+    },
+    {
+        id: '20',
+        category: 'br1',
+        name: '🟢 PC Bypass',
+        img: 'https://i.imgur.com/OAomCLz.jpeg',
+        desc: 'Xếp Hạng 50 Người',
+        discountPercentage: 0,
+        variants: [
+            { name: '1 Ngày', price: 100000 },
+            { name: '10 Ngày', price: 200000 },
+            { name: '30 Ngày', price: 300000 },
+        ]
+    },
+    {
+        id: '21',
+        category: 'br1',
+        name: '🟢 PC No Bypass',
+        img: 'https://i.imgur.com/OAomCLz.jpeg',
+        desc: 'Ghép Trận Với  PC',
+        discountPercentage: 0,
+        variants: [
+            { name: '1 Ngày', price: 80000 },
+            { name: '10 Ngày', price: 180000 },
+            { name: '30 Ngày', price: 250000 },
         ]
     },
 ];
@@ -810,8 +835,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ❌ LOẠI BỎ HÀM LẮNG NGHE SỰ KIỆN STORAGE VÌ KHÔNG CẦN THIẾT NỮA
     }
-
 });
-
-
-

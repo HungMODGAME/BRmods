@@ -134,3 +134,25 @@ header {
     margin-right: 15px; /* Tạo khoảng cách giữa logo và tiêu đề */
     border-radius: 4px; /* Thêm bo góc cho logo (tùy chọn) */
 }
+
+/* Hiệu ứng chữ 7 màu nhấp nháy */
+.rainbow-text {
+    font-weight: bold;
+    /* Tạo dải màu cầu vồng */
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    /* Áp dụng màu nền vào chữ và làm trong suốt màu chữ gốc */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Kích thước nền rộng ra để tạo hiệu ứng chuyển động mượt */
+    background-size: 400% 400%;
+    /* Tốc độ nhấp nháy: 5 giây, chạy vô hạn */
+    animation: rainbow-animation 5s ease infinite;
+}
+
+/* Định nghĩa chuyển động dải màu */
+@keyframes rainbow-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
