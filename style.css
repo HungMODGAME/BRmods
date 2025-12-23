@@ -156,3 +156,48 @@ header {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
+/* Container cho 2 nút liên hệ */
+.contact-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+/* Định dạng chung cho nút có icon */
+.btn-contact {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: opacity 0.3s;
+}
+
+.btn-contact:hover {
+    opacity: 0.8;
+}
+
+.btn-contact img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 0 !important; /* Ghi đè margin cũ của ảnh sản phẩm */
+}
+
+/* Màu sắc riêng */
+.btn-telegram {
+    background-color: #0088cc;
+}
+
+.btn-zalo {
+    background-color: #0068ff;
+}
